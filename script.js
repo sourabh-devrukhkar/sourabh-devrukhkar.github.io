@@ -11,18 +11,27 @@ async function fetchProjects() {
     
     const data = await response.json();
 
-    // Filter out forks and the profile README repo
-    const softwareProjects = data.filter(repo => !repo.fork && repo.name !== username);
+    /** * FILTER LOGIC:
+     * 1. !repo.fork -> Excludes projects you just copied from others
+     * 2. repo.name !== username -> Excludes the 'profile' repository
+     * 3. repo.name !== `${username}.github.io` -> Excludes THIS website repository
+     */
+    const softwareProjects = data.filter(repo => 
+      !repo.fork && 
+      repo.name !== username && 
+      repo.name !== `${username}.github.io`
+    );
     
     let output = "";
 
-    // Build the HTML cards directly from the GitHub data
+    // Build the HTML cards
     softwareProjects.forEach(project => {
       output += `
         <div class="card">
           <h3>${project.name}</h3>
           <p>${project.description || "No description available"}</p>
           <div style="display: flex; gap: 15px; margin-top: 10px; font-size: 13px; color: #cbd5e1;">
+          <span>💻 ${project.language || "N/A"}</span>
           </div>
           <a href="${project.html_url}" target="_blank">View Project &rarr;</a>
         </div>
