@@ -1,0 +1,163 @@
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  
+  /* The CAD Blueprint Grid overlaid on your deep gradient */
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(145deg, #0a1128 0%, #113f47 40%, #2f5d62 75%, #7a6347 100%);
+  
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+  background-attachment: fixed;
+  color: #e2e8f0;
+}
+
+/* Apply the tech font to headings and logos */
+h1, h2, h3, .logo {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* Dark Glassmorphism Navbar */
+nav {
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 15px 30px;
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.6rem;
+  color: #f8fafc;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Sections */
+section {
+  padding: 60px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  color: #f8fafc;
+}
+
+/* About Me Paragraph */
+#about p {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1.15rem;
+  color: #cbd5e1;
+  font-weight: 300;
+}
+
+/* Projects Grid */
+#projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Dark Glassmorphism Cards with Gold Accents */
+.card {
+  background: rgba(15, 23, 42, 0.35);
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border: 1px solid rgba(251, 191, 36, 0.4); /* Gold border glow */
+  background: rgba(30, 41, 59, 0.5);
+  box-shadow: 0 10px 25px rgba(251, 191, 36, 0.15); /* Gold shadow */
+}
+
+.card h3 {
+  color: #fbbf24; /* Premium Gold for the titles */
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #fbbf24; /* Gold links */
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.card a:hover {
+  color: #fcd34d; /* Lighter gold on hover */
+}
+
+/* Footer & Social Links */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+
+.social-links a {
+  color: #cbd5e1;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.social-links a:hover {
+  color: #fbbf24; /* Icons turn gold on hover */
+  transform: translateY(-4px);
+}
