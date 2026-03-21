@@ -31,7 +31,7 @@ async function fetchProjects() {
           <h3>${project.name}</h3>
           <p>${project.description || "No description available"}</p>
           <div style="display: flex; gap: 15px; margin-top: 10px; font-size: 13px; color: #cbd5e1;">
-            <span>💻 ${project.language || "N/A"}</span>
+            
           </div>
           <a href="${project.html_url}" target="_blank">View Project &rarr;</a>
         </div>
