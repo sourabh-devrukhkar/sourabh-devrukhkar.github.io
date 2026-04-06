@@ -4,7 +4,7 @@
     "category": "research",
     "description": "This research introduces a revolutionary, cable-driven robotic arm attachment designed to grant wheelchair users ultimate independence. Inspired by octopus tentacles and the mechanics of the human spine, this animatronic system offers fluid, multi-directional movement operated simply via a joystick. By specifically addressing major accessibility barriers like boarding public transportation and transferring into vehicles—this technology empowers individuals with mobility impairments to navigate daily life without relying on others for physical assistance. The CDRA's innovative design not only enhances the quality of life for wheelchair users but also sets a new standard for assistive robotics, demonstrating how thoughtful engineering can transform lives and promote inclusivity in society.",
     "link": "documents/CDRA_Paper.pdf",
-    "tech": "ROBOTICS-RESEARCH PAPER"
+    "tech": "ROBOTICS-RESEARCH PAPER-INNOVATION"
   },
   {
     "title": "Smart Parking System",
@@ -18,6 +18,13 @@
     "category": "research",
     "description": "This research presents an IoT-based environmental control system that integrates smart thermal regulation with real-time monitoring capabilities. The system, named Thermo-Clock, ensures optimal indoor climate conditions while minimizing energy consumption through adaptive control algorithms and seamless integration with existing building infrastructure.",
     "link": "documents/ThermoClock.pdf",
-    "tech": "IOT SYSTEM-PROTOTYPING"
+    "tech": "CONTROL SYSTEM-IOT SYSTEM-PROTOTYPING"
+  },
+  {
+    "title": "Auto-Switching Front Light for Motorcycles & Scooters",
+    "category": "research",
+    "description": "This research presents an innovative auto-switching front light system designed for motorcycles and scooters. The system utilizes IoT technology to automatically adjust lighting based on ambient conditions and riding scenarios, enhancing visibility and safety for riders.",
+    "link": "documents/AutoSwitchingLight.pdf",
+    "tech": "MECHATRONICS-INNOVATION-CONTROL SYSTEM"
   }
 ]
