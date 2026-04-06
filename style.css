@@ -1,163 +1,63 @@
-/* Base Styles */
-html {
-  scroll-behavior: smooth;
+:root {
+    --bg: #0a0a0a;
+    --accent: #fbbf24;
+    --card-bg: #111111;
+    --border: #222222;
 }
 
 body {
-  margin: 0;
-  font-family: 'Outfit', sans-serif;
-  
-  /* The CAD Blueprint Grid overlaid on your deep gradient */
-  background: 
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(145deg, #0a1128 0%, #113f47 40%, #2f5d62 75%, #7a6347 100%);
-  
-  background-size: 40px 40px, 40px 40px, 100% 100%;
-  background-attachment: fixed;
-  color: #e2e8f0;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background: 
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        var(--bg);
+    background-size: 40px 40px;
+    color: #fff;
+    overflow-x: hidden;
 }
 
-/* Apply the tech font to headings and logos */
-h1, h2, h3, .logo {
-  font-family: 'Space Grotesk', sans-serif;
-  letter-spacing: 0.5px;
-}
+h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; margin: 0; }
 
-/* Dark Glassmorphism Navbar */
-nav {
-  background: rgba(15, 23, 42, 0.4);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  padding: 15px 30px;
-}
+nav { padding: 30px; display: flex; justify-content: center; }
+.nav-content { width: 100%; max-width: 95%; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.1rem; letter-spacing: 2px; color: #fff; font-weight: 700; }
+.nav-links a { color: #888; text-decoration: none; margin-left: 25px; font-size: 0.8rem; font-weight: 600; transition: 0.3s; }
+.nav-links a:hover { color: var(--accent); }
 
-.nav-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.hero { padding: 40px 20px; text-align: center; }
+.badge { background: #1a1a1a; padding: 10px 25px; border-radius: 100px; font-size: 1rem; color: var(--accent); border: 1px solid var(--accent); display: inline-block; font-weight: 600; }
+.hero h1 { font-size: clamp(2rem, 6vw, 4rem); margin-top: 25px; letter-spacing: -2px; }
+.hero p { color: #888; font-size: 1.2rem; margin-top: 10px; max-width: 700px; margin-left: auto; margin-right: auto; }
 
-.logo {
-  font-size: 1.6rem;
-  color: #f8fafc;
-  margin: 0;
-  font-weight: 700;
+/* Domain Selector */
+.category-selector { display: flex; gap: 30px; max-width: 95%; margin: 40px auto; padding: 20px; }
+.big-card {
+    flex: 1; background: var(--card-bg); border: 1px solid var(--border); padding: 70px 40px;
+    border-radius: 30px; cursor: pointer; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-align: center;
 }
+.big-card:hover { border-color: var(--accent); transform: translateY(-10px); background: #151515; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+.card-icon { font-size: 3.5rem; margin-bottom: 25px; }
+.big-card h2 { font-size: 2.4rem; margin-bottom: 15px; color: #fff; }
+.big-card p { color: #777; font-size: 1.15rem; margin-bottom: 35px; line-height: 1.6; max-width: 450px; margin-left: auto; margin-right: auto; }
+.explore-btn { font-weight: 600; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 5px; }
 
-/* Sections */
-section {
-  padding: 60px 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+/* Portfolio Viewer */
+.portfolio-section { max-width: 98%; margin: 0 auto; padding: 20px; animation: slideUp 0.5s ease-out; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
-h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2.2rem;
-  color: #f8fafc;
-}
+.section-header { display: flex; align-items: center; gap: 30px; margin-bottom: 50px; border-bottom: 1px solid #222; padding-bottom: 20px; }
+.back-btn { background: #1a1a1a; border: 1px solid #333; color: #888; padding: 12px 25px; border-radius: 12px; cursor: pointer; font-weight: 600; transition: 0.3s; }
+.back-btn:hover { border-color: var(--accent); color: var(--accent); }
 
-/* About Me Paragraph */
-#about p {
-  text-align: left;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.8;
-  font-size: 1.15rem;
-  color: #cbd5e1;
-  font-weight: 300;
-}
+.bento-grid { column-count: 3; column-gap: 25px; }
+.bento-item { break-inside: avoid; background: var(--card-bg); border: 1px solid var(--border); border-radius: 24px; padding: 40px; margin-bottom: 25px; transition: 0.3s ease; }
+.bento-item h3 { font-size: 1.6rem; color: var(--accent); margin-bottom: 15px; text-transform: capitalize; }
+.bento-item p { color: #94a3b8; font-size: 1rem; line-height: 1.6; }
+.cta-link { color: #fff; text-decoration: none; font-weight: 600; font-size: 0.9rem; margin-top: 25px; display: inline-block; border-bottom: 1px solid #444; padding-bottom: 3px; }
+.cta-link:hover { border-color: #fff; }
 
-/* Projects Grid */
-#projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
+@media (max-width: 1100px) { .category-selector { flex-direction: column; } .bento-grid { column-count: 2; } }
+@media (max-width: 700px) { .bento-grid { column-count: 1; } }
 
-/* Dark Glassmorphism Cards with Gold Accents */
-.card {
-  background: rgba(15, 23, 42, 0.35);
-  backdrop-filter: blur(12px); 
-  -webkit-backdrop-filter: blur(12px);
-  padding: 25px;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  border: 1px solid rgba(251, 191, 36, 0.4); /* Gold border glow */
-  background: rgba(30, 41, 59, 0.5);
-  box-shadow: 0 10px 25px rgba(251, 191, 36, 0.15); /* Gold shadow */
-}
-
-.card h3 {
-  color: #fbbf24; /* Premium Gold for the titles */
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.card p {
-  font-size: 14px;
-  color: #94a3b8;
-  line-height: 1.6;
-  flex-grow: 1;
-}
-
-.card a {
-  display: inline-block;
-  margin-top: 15px;
-  text-decoration: none;
-  color: #fbbf24; /* Gold links */
-  font-weight: 600;
-  transition: color 0.2s;
-}
-
-.card a:hover {
-  color: #fcd34d; /* Lighter gold on hover */
-}
-
-/* Footer & Social Links */
-footer {
-  text-align: center;
-  padding: 30px;
-  background: rgba(15, 23, 42, 0.4);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: #94a3b8;
-  margin-top: 40px;
-  font-size: 14px;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-bottom: 15px;
-}
-
-.social-links a {
-  color: #cbd5e1;
-  transition: color 0.3s ease, transform 0.3s ease;
-  display: inline-block;
-}
-
-.social-links a:hover {
-  color: #fbbf24; /* Icons turn gold on hover */
-  transform: translateY(-4px);
-}
+footer { text-align: center; padding: 100px 0; color: #333; font-size: 0.75rem; letter-spacing: 2px; }
