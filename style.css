@@ -149,25 +149,41 @@ nav {
 .cta-link { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; margin-top: 20px; display: inline-block; border-bottom: 1px solid #444; padding-bottom: 3px; transition: 0.3s; }
 .cta-link:hover { color: var(--accent-light); border-color: var(--accent-light); }
 
-
-/* Mobile Navigation Fix */
-@media (max-width: 850px) {
-    .nav-content {
-        flex-direction: column;
-        gap: 15px;
+/* =========================================
+   MOBILE RESPONSIVENESS FIX
+   ========================================= */
+@media (max-width: 950px) {
+    /* 1. Stack the two big domain cards vertically */
+    .category-selector { 
+        flex-direction: column; 
     }
-    .nav-links {
-        position: relative; /* Removes the absolute positioning */
-        right: 0;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-    .nav-links a {
-        margin-left: 0; /* Resets the desktop margins */
+    
+    /* 2. Change the portfolio grid to 2 columns for tablets */
+    .bento-grid { 
+        column-count: 2; 
     }
 }
+
+@media (max-width: 750px) {
+    /* 3. Change the portfolio grid to 1 single column for phones */
+    .bento-grid { 
+        column-count: 1; 
+    }
+    
+    /* 4. Slightly reduce padding on mobile so it doesn't look bulky */
+    .big-card {
+        padding: 40px 20px;
+    }
+    .bento-item {
+        padding: 30px;
+    }
+    
+    /* 5. Make the titles a bit smaller to fit mobile screens perfectly */
+    .big-card h2 {
+        font-size: 2rem;
+    }
+}
+
 /* Footer */
 footer { text-align: center; padding: 100px 0; color: #555; font-size: 0.75rem; letter-spacing: 2px; }
 .social-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; }
