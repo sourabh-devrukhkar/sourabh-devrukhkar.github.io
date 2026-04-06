@@ -1,0 +1,23 @@
+[
+  {
+    "title": "CDRA- Cable-Driven Robotic Arm",
+    "category": "research",
+    "description": "This research introduces a revolutionary, cable-driven robotic arm attachment designed to grant wheelchair users ultimate independence. Inspired by octopus tentacles and the mechanics of the human spine, this animatronic system offers fluid, multi-directional movement operated simply via a joystick. By specifically addressing major accessibility barriers like boarding public transportation and transferring into vehicles—this technology empowers individuals with mobility impairments to navigate daily life without relying on others for physical assistance. The CDRA's innovative design not only enhances the quality of life for wheelchair users but also sets a new standard for assistive robotics, demonstrating how thoughtful engineering can transform lives and promote inclusivity in society.",
+    "link": "documents/CDRA_Paper.pdf",
+    "tech": "ROBOTICS-RESEARCH PAPER"
+  },
+  {
+    "title": "Smart Parking System",
+    "category": "research",
+    "description": "This research presents an innovative Smart Parking System that leverages IoT technology to optimize parking space utilization and enhance user convenience. The system integrates real-time sensor data, mobile applications, and cloud-based analytics to provide drivers with accurate information on available parking spaces, streamline the parking process, and reduce traffic congestion in urban areas. By utilizing a network of sensors embedded in parking lots and a user-friendly mobile interface, the Smart Parking System aims to revolutionize urban mobility and contribute to more efficient city planning.",
+    "link": "documents/SmartParking.pdf",
+    "tech": "MECHATRONICS-IOT SYSTEM"
+  },
+  {
+    "title": "IoT-Based Environmental Control System (Thermo-Clock)",
+    "category": "research",
+    "description": "This research presents an IoT-based environmental control system that integrates smart thermal regulation with real-time monitoring capabilities. The system, named Thermo-Clock, ensures optimal indoor climate conditions while minimizing energy consumption through adaptive control algorithms and seamless integration with existing building infrastructure.",
+    "link": "documents/ThermoClock.pdf",
+    "tech": "IOT SYSTEM-PROTOTYPING"
+  }
+]
