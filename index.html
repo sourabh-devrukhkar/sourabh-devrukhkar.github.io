@@ -4,81 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sourabh Devrukhkar | Mechatronics Portfolio</title>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
         <div class="nav-content">
-            <h1 class="logo">Sourabh Devrukhkar</h1>
+            <h1 class="logo" onclick="window.location.reload()" style="cursor:pointer">SOURABH DEVRUKHKAR</h1>
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#github-projects">Showcase</a>
-                <a href="#research">Research</a>
+                <a href="https://github.com/sourabh-devrukhkar" target="_blank">GITHUB</a>
+                <a href="https://www.linkedin.com/in/sourabh-devrukhkar/" target="_blank">LINKEDIN</a>
             </div>
         </div>
     </nav>
 
-    <header id="about" class="hero">
-        <div class="hero-content">
-            <h2>🕹️ Mechatronics Engineer</h2>
-            <p>
-                I bridge the gap between complex hardware and intelligent software. 
-                From <b>SolidWorks</b> surfacing and <b>KiCad</b> PCB design to <b>ROS-based</b> autonomous navigation, 
-                I turn science fiction into engineering reality.
-            </p>
+    <header class="hero">
+        <div class="hero-inner">
+            <span class="badge">Mechatronics Engineer</span>
+            <h1>Bridging Hardware & Intelligence.</h1>
+            <p>Architecting the synergy between complex kinetic structures and intelligent control to bridge the gap between abstract design and physical autonomy.</p>
         </div>
     </header>
 
-    <section id="github-projects">
-        <h2 class="section-title">🚀 Technical Showcase</h2>
-        <p class="section-subtitle">Live repositories synced from GitHub</p>
-        <div id="projects" class="projects-grid">
-            </div>
-    </section>
+    <section class="category-selector">
+        <div class="big-card" onclick="showCategory('research')">
+            <div class="card-icon">⚙️</div>
+            <h2>Kinematics & R&D</h2>
+            <p>Advanced Surface Modeling, Mechanical Linkages, and Peer-Reviewed Robotics Research.</p>
+            <span class="explore-btn">Analyze Designs &rarr;</span>
+        </div>
 
-    <section id="research" class="research-section">
-        <h2 class="section-title">📜 Research & University Works</h2>
-        <p class="section-subtitle">Academic papers and specialized engineering projects</p>
-        
-        <div class="manual-grid">
-            <div class="manual-card">
-                <div class="card-tag">Research Paper</div>
-                <h3>Cable-Driven Robotic Arm</h3>
-                <p>Development of a specialized robotic arm for wheelchairs. Presented at the IAIPR International Conference.</p>
-                <a href="documents/CDRA_Paper.pdf" target="_blank" class="view-btn">View Publication &rarr;</a>
-            </div>
-
-            <div class="manual-card">
-                <div class="card-tag">IoT System</div>
-                <h3>Android Smart Parking</h3>
-                <p>IoT-based real-time parking management system utilizing cloud integration and sensor fusion.</p>
-                <a href="documents/SmartParking.pdf" target="_blank" class="view-btn">View Infographic &rarr;</a>
-            </div>
-
-            <div class="manual-card">
-                <div class="card-tag">Prototyping</div>
-                <h3>Arduino Thermo-Clock</h3>
-                <p>Smart thermal regulation system designed for industrial environmental control.</p>
-                <a href="documents/ThermoClock.pdf" target="_blank" class="view-btn">View Case Study &rarr;</a>
-            </div>
+        <div class="big-card" onclick="showCategory('software')">
+            <div class="card-icon">📟</div>
+            <h2>Embedded Intelligence</h2>
+            <p>Autonomous Navigation (ROS), C++ Firmware, and IoT Ecosystem Development.</p>
+            <span class="explore-btn">Review Systems &rarr;</span>
         </div>
     </section>
+
+    <main class="portfolio-section" id="project-viewer" style="display: none;">
+        <div class="section-header">
+            <button class="back-btn" onclick="hideCategory()">&larr; Back to Domains</button>
+            <h2 id="category-title">Selected Works</h2>
+        </div>
+        <div id="portfolio-grid" class="bento-grid">
+            </div>
+    </main>
 
     <footer>
-        <div class="social-links">
-            <a href="https://github.com/sourabh-devrukhkar" target="_blank" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-            </a>
-            <a href="https://linkedin.com/in/YOUR_PROFILE_URL" target="_blank" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-            </a>
-        </div>
-        <p>&copy; 2026 Sourabh Devrukhkar</p>
+        <p>© 2026 SOURABH DEVRUKHKAR — ENGINEERED FOR EXCELLENCE</p>
     </footer>
 
     <script src="script.js"></script>
